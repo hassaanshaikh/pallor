@@ -3,7 +3,7 @@ export default function About() {
     <div className="pt-32 pb-20 px-6">
       <div className="container mx-auto max-w-4xl">
         <h1 className="text-5xl font-bold text-center mb-10 bg-linear-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
-          About Elegance Salon
+          About Rk Ghazi
         </h1>
 
         <div className="bglinear-to-br from-pink-50 to-purple-50 p-8 rounded-2xl mb-10">

@@ -3,7 +3,7 @@ export default function Footer({ setCurrentPage }) {
     <footer className="bg-gray-900 text-white py-8 mt-20">
       <div className="container mx-auto grid md:grid-cols-3 gap-8 px-6">
         <div>
-          <h4 className="font-bold mb-2">Elegance Salon</h4>
+          <h4 className="font-bold mb-2">RK GHAZI</h4>
           <p className="text-gray-400">Your beauty partner</p>
         </div>
 
@@ -28,7 +28,7 @@ export default function Footer({ setCurrentPage }) {
       </div>
 
       <p className="text-center text-gray-500 mt-6">
-        © 2026 Elegance Salon
+        ©2026 rkghazi
       </p>
     </footer>
   );
