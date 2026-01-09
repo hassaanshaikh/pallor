@@ -54,7 +54,7 @@
 
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "../assets/logo1.PNG";
+import logo from "../assets/logo2.png";
 
 export default function Header({ currentPage, setCurrentPage }) {
   const [open, setOpen] = useState(false);
@@ -77,7 +77,7 @@ export default function Header({ currentPage, setCurrentPage }) {
           <img
             src={logo}
             alt="RK Ghazi Logo"
-            className="w-20 h-15 object-contain"
+            className="w-20 h-full object-contain"
           />
 
           <span className="text-2xl font-bold bg-linear-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
