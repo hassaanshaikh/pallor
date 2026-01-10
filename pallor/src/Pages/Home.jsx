@@ -1,9 +1,27 @@
+import p3 from "../assets/p3.jpeg";
+import p7 from "../assets/p7.jpeg";
+import p4 from "../assets/p4.jpeg";
+import p10 from "../assets/p10.jpeg";
+import p12 from "../assets/p12.jpeg";
+import p1 from "../assets/p1.jpeg";
+import p8 from "../assets/p8.jpeg";
+import p9 from "../assets/p9.jpeg";
+
+import e1 from "../assets/e1.jpeg";
+
+import c1 from "../assets/c1.jpeg";
+import c3 from "../assets/c3.jpeg";
+
+import b2 from "../assets/b2.jpg";
+import b3 from "../assets/b3.jpeg";
+import b4 from "../assets/b4.jpeg";
+
 export default function Home() {
   return (
     <main>
 
       {/* ================= HERO / BRAND STATEMENT ================= */}
-      <section className="py-28 px-6 bg-linear-to-br from-pink-50 via-purple-50 to-white">
+      <section className="py-36 px-4 bg-linear-to-br from-pink-50 via-purple-50 to-white">
         <div className="container mx-auto text-center max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-linear-to-r from-pink-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
             Your Beauty, Your Confidence
@@ -22,31 +40,54 @@ export default function Home() {
       {/* ================= WHY CHOOSE US ================= */}
       <section className="py-24 px-6 bg-white">
         <div className="container mx-auto text-center">
+
           <h2 className="text-4xl font-bold mb-4">
-            Why Choose Rk Ghazi
+            Why Choose RK Ghazi
           </h2>
+
           <p className="text-gray-600 mb-14 max-w-2xl mx-auto">
-            Because beauty deserves expertise, care, and a luxurious experience.
+            Because your beauty deserves skill, care, and a refined experience.
           </p>
 
           <div className="grid md:grid-cols-3 gap-10">
-            {[
-              "Expert Professionals",
-              "Luxury Environment",
-              "Modern Trends",
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="p-6 rounded-2xl hover:shadow-xl transition"
-              >
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-linear-to-r from-pink-500 to-purple-600"></div>
-                <h3 className="text-xl font-bold mb-2">{item}</h3>
-                <p className="text-gray-600">
-                  Designed to give you confidence and comfort.
-                </p>
+
+          {[
+          {
+            title: "Certified Beauty Experts",
+            img: c1,
+            desc: "Handled by trained professionals who understand your style."
+          },
+          {
+            title: "Premium Salon Ambience",
+            img: e1,
+            desc: "A calm, luxurious space designed for comfort and confidence."
+          },
+          {
+            title: "Trend-Forward Techniques",
+            img: c3,
+            desc: "Modern beauty methods inspired by global fashion trends."
+          },
+          
+          ].map((item, i) => (
+            <div key={i} className="p-6 rounded-2xl hover:shadow-xl transition">
+
+          {/* CIRCLE IMAGE */}
+              
+              <div className="w-34 h-34 mx-auto mb-5 rounded-full overflow-hidden shadow-md">
+                <img src={item.img} alt={item.title} className="h-full w-full object-cover" />
               </div>
-            ))}
+
+              <h3 className="text-xl font-bold mb-2">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {item.desc}
+              </p>
           </div>
+        ))}
+
+         </div>
         </div>
       </section>
 
@@ -68,11 +109,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="h-80 rounded-3xl bg-linear-to-br from-pink-300 to-purple-400 shadow-2xl transition hover:scale-[1.02] relative">
-            <span className="absolute bottom-5 right-6 text-white/40 text-sm">
-              Rk Ghazi
-            </span>
+          <div className="h-80 rounded-3xl shadow-2xl transition hover:scale-[1.02] relative bg-center bg-cover"
+            style={{ backgroundImage: `url(${e1})` }} >
+
+            <div className="absolute inset-0 rounded-3xl bg-black/20"></div>
+   
           </div>
+
         </div>
       </section>
 
@@ -88,34 +131,41 @@ export default function Home() {
             We work with trusted, salon-grade products chosen for quality,
             safety, and long-lasting results.
           </p>
-
+      
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-            {[
-              "Hair Care",
-              "Skin Care",
-              "Makeup",
-              "Nail Care",
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="p-6 rounded-2xl bg-gray-50 hover:shadow-xl transition hover:scale-105"
-              >
-                <div className="w-28 h-28 mx-auto mb-4 rounded-full bg-linear-to-br from-pink-300 to-purple-400 flex items-center justify-center">
-                  <span className="text-white font-semibold text-sm">
-                    {item}
-                  </span>
-                </div>
+          {[
+            { title: "Yaswa Loose Powder", img: p3 },
+            { title: "Yaswa Hair Oil", img: p7 },
+            { title: "Yaswa Wet Cake", img: p4 },
+            { title: "Yaswa Whitening Cream", img: p12 },
+            { title: "Yaswa Facial Machine", img: p10 },
+            { title: "Yaswa Mousse Base", img: p1 },
+            { title: "Yaswa Cosmetics", img: p8 },
+            { title: "Yaswa Hydro Beauty", img: p9 },
 
-                <p className="text-gray-600 text-sm uppercase tracking-wider">
-                  Professional Grade
-                </p>
-              </div>
-            ))}
+          ].map((item, i) => (
+        <div
+          key={i}
+          className="rounded-2xl bg-gray-50 hover:shadow-xl transition hover:scale-105 overflow-hidden" >
+
+        {/* IMAGE (FIXED) */}
+          <div className="aspect-square bg-white flex items-center justify-center p-4">
+            <img src={item.img} alt={item.title} className="max-h-full max-w-full object-contain" />
           </div>
 
-          <p className="mt-12 text-sm text-gray-500 italic">
-            *Product visuals shown for brand trust & representation only
-          </p>
+        {/* TEXT */}
+          <div className="p-4 text-center">
+            <h3 className="text-lg font-semibold">
+              {item.title}
+            </h3>
+            <p className="text-sm text-gray-500 mt-1">
+              Professional Products
+             </p>
+          </div>
+
+        </div>
+        ))}
+          </div>
         </div>
       </section>
 
@@ -130,22 +180,76 @@ export default function Home() {
             A visual reflection of Rk Ghazi, comfort, and modern beauty.
           </p>
 
+          {/* boxes */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              "from-pink-300 to-rose-400",
-              "from-purple-300 to-indigo-400",
-              "from-amber-300 to-orange-400",
-              "from-blue-300 to-cyan-400",
-            ].map((bg, i) => (
-              <div
-                key={i}
-                className={`h-56 rounded-2xl bg-linear-to-br ${bg} hover:scale-105 transition relative`}
-              >
-                <span className="absolute bottom-4 right-4 text-white/40 text-xs">
-                  Rk Ghazi
-                </span>
+            {/* box1 */}
+            <div className="h-56 rounded-2xl overflow-hidden relative group">
+              
+              <img src={c1} alt="The Rk Ghazi Experience" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+              <div className="absolute inset-0 bg-black/40 flex items-end p-4">
+                <div className="text-left">
+                  <h3 className="text-white text-lg font-semibold">
+                    The Rk Ghazi Experience
+                  </h3>
+                  <p className="text-white/80 text-sm">
+                    Beauty • Comfort • Confidence
+                  </p>
+                </div>
               </div>
-            ))}
+
+            </div>
+
+            {/* box2 */}
+            <div className="h-56 rounded-2xl overflow-hidden relative group">
+              
+              <img src={b2} alt="Beauty in Action" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+              <div className="absolute inset-0 bg-black/40 flex items-end p-4">
+                <div className="text-left">
+                  <h3 className="text-white text-lg font-semibold">
+                    Beauty in Action
+                  </h3>
+                  <p className="text-white/80 text-sm">
+                    Beauty • Comfort • Confidence
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            {/* box3 */}
+            <div className="h-56 rounded-2xl overflow-hidden relative group">
+              
+              <img src={b3} alt="Tools and Products" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+              <div className="absolute inset-0 bg-black/40 flex items-end p-4">
+                <div className="text-left">
+                  <h3 className="text-white text-lg font-semibold">
+                    Tools and Products
+                  </h3>
+                  <p className="text-white/80 text-sm">
+                    Beauty • Comfort • Confidence
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            {/* box4 */}
+            <div className="h-56 rounded-2xl overflow-hidden relative group">
+              
+              <img src={b4} alt="Confident Beauty Result" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+              <div className="absolute inset-0 bg-black/40 flex items-end p-4">
+                <div className="text-left">
+                  <h3 className="text-white text-lg font-semibold">
+                    Confident Beauty Result
+                  </h3>
+                  <p className="text-white/80 text-sm">
+                    Beauty • Comfort • Confidence
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
       </section>
@@ -153,3 +257,4 @@ export default function Home() {
     </main>
   );
 }
+
