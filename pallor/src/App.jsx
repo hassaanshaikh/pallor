@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 
@@ -7,19 +6,21 @@ import About from "./Pages/About";
 import Services from "./Pages/Services";
 import Contact from "./Pages/Contact";
 
-export default function App() {
-  const [currentPage, setCurrentPage] = useState("home");
+import { Routes, Route } from "react-router-dom";
 
+export default function App() {
   return (
     <div className="min-h-screen bg-white">
-      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <Header />
 
-      {currentPage === "home" && <Home setCurrentPage={setCurrentPage} />}
-      {currentPage === "about" && <About />}
-      {currentPage === "services" && <Services />}
-      {currentPage === "contact" && <Contact />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
 
-      <Footer setCurrentPage={setCurrentPage} />
+      <Footer />
     </div>
   );
 }

@@ -14,15 +14,11 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <div className="space-y-6">
-            <div className="flex gap-4">
-              <MapPin className="text-pink-500" />
-              <p>123 Beauty Street, Style City</p>
-            </div>
+          <div className="space-y-6 mt-10">
 
             <div className="flex gap-4">
               <Phone className="text-pink-500" />
-              <p>(555) 123-4567</p>
+              <p>+92 311 3927677</p>
             </div>
 
             <div className="flex gap-4">
@@ -33,7 +29,7 @@ export default function Contact() {
             <div className="flex gap-4">
               <Clock className="text-pink-500" />
               <p>
-                Mon-Sat: 9AM-7PM <br /> Sun: 10AM-5PM
+                Mon-Sat: 9AM-7PM
               </p>
             </div>
 
