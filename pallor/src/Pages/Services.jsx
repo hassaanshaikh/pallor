@@ -4,25 +4,25 @@ export default function Services() {
   const services = [
     {
       title: "Hair Styling",
-      price: "From $50",
+      // price: "From $50",
       desc: "Professional hair cuts, coloring & treatments",
       icon: Scissors,
     },
     {
       title: "Facial & Skin Care",
-      price: "From $60",
+      // price: "From $60",
       desc: "Relaxing and rejuvenating skin services",
       icon: Sparkles,
     },
     {
       title: "Manicure & Pedicure",
-      price: "From $35",
+      // price: "From $35",
       desc: "Complete nail care & spa experience",
       icon: Sparkles,
     },
     {
       title: "Makeup & Styling",
-      price: "From $80",
+      // price: "From $80",
       desc: "Event & bridal makeup services",
       icon: Sparkles,
     },
